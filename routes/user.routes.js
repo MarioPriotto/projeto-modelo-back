@@ -68,7 +68,7 @@ userRoute.post("/sign-up", async (req, res) => {
     };
 
     //envio do email
-    await transporter.sendMail(mailOptions);
+    //await transporter.sendMail(mailOptions);
 
     return res.status(201).json(newUser);
   } catch (error) {
@@ -154,7 +154,7 @@ userRoute.get("/profile", isAuth, attachCurrentUser, async (req, res) => {
       `,
     };
 
-    await transporter.sendMail(mailOptions);
+    //await transporter.sendMail(mailOptions);
 
     return res.status(200).json(req.currentUser);
   } catch (error) {
